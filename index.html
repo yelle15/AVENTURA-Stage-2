@@ -66,10 +66,6 @@ const methods = ()=>{
     data.forEach(postData =>{
         const postElement = document.createElement('div');
         postElement.classList.add('card');
-
-        if(postData.id === 1) {
-            postElement.classList.add('arielle-card');
-        }
         postElement.innerHTML=`
         <img class="avatar" src="${postData.avatar}"></img>
         <p class="id"><b>#</b>${postData.id}</p>
