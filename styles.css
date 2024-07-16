@@ -76,6 +76,10 @@ body{
     text-align: center;
 }
 
+@media (min-width: 460px){
+        flex-direction: column;
+        justify-content: center;
+    }
 @keyframes fade {
     0%{
         opacity: 0;
