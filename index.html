@@ -9,10 +9,9 @@
 
 <body>
     <!--array-->
-    <div class="data_display">
-    </div>
-
-
+    <div class="container">
+    <div class="data_display"></div>
+  </div>
     <!--javascript-->
 <script>
 const data = [
@@ -23,7 +22,7 @@ const data = [
     last_name: "Bluth",
     avatar: "https://reqres.in/img/faces/1-image.jpg",
   },
-    {
+  {
     id: 2,
     email: "janet.weaver@reqres.in",
     first_name: "Janet",
@@ -57,7 +56,7 @@ const data = [
     first_name: "Tracey",
     last_name: "Ramos",
     avatar: "https://reqres.in/img/faces/6-image.jpg",
-  }
+  },
 ];
 
 const container = document.querySelector('.data_display')
@@ -67,9 +66,14 @@ const methods = ()=>{
     data.forEach(postData =>{
         const postElement = document.createElement('div');
         postElement.classList.add('card');
+
+        if(postData.id === 1) {
+            postElement.classList.add('arielle-card');
+        }
         postElement.innerHTML=`
         <img class="avatar" src="${postData.avatar}"></img>
-        <p class="id"><b>#${postData.id}</p>
+        <p class="id"><b>#</b>${postData.id}</p>
+        <p class="section">${postData.section}</p>
         <div class="name">
             <h3 class="first_name">${postData.first_name}</h3>
             <h3 class="last_name">${postData.last_name}</h3>
