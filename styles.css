@@ -25,6 +25,7 @@ body{
     margin: 4rem auto;
     animation: fade 1s ease-out forwards;
     display: grid;
+    grid-template-columns:repeat(3, 1fr);
     gap: 30px;
 }
 
