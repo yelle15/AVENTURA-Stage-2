@@ -79,6 +79,7 @@ body{
 @media (min-width: 460px){
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 @keyframes fade {
     0%{
