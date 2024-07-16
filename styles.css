@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0; 
+    letter-spacing: .5px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d5b9b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data_display{
+    width: 50%;
+    max-width: 1000px;
+    margin: 4rem auto;
+    animation: fade 1s ease-out forwards;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    padding: 2rem;
+    height: auto;
+    width: auto;
+    background: #ece2d0; 
+    transition: .4s ease-in;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);  
+    display: flex;
+    flex-direction: column; 
+}
+
+.id, .section{
+    margin-top: .5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    color: #6d2e46
+}
+
+.name{
+    text-align: center;
+    color: #6d2e46;
+    margin-bottom: .5rem;
+}
+
+.first_name, .last_name{
+    display: inline;
+}
+
+.avatar{
+    margin: 0, auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+.arielle-card .avatar {
+    margin: 0, auto;
+    width: 70%;
+    height: 70%;
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+.email{
+    color: #6d2e46;
+    text-align: center;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
