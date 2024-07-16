@@ -11,6 +11,10 @@
     <!--array-->
     <div class="container">
     <div class="data_display"></div>
+    <div class="loadMoreSection">
+      <button id="loadMore">Load More</button>
+      <p id="noData" style="display: none;">No data.</p>
+    </div>
   </div>
     <!--javascript-->
 <script>
@@ -59,17 +63,23 @@ const data = [
   },
 ];
 
-const container = document.querySelector('.data_display')
+const container = document.querySelector('.data_display');
+const displayCards = ()=>{
 
-const methods = ()=>{
+    /*container.innerHTML = '';*/
     /*display for each data in the array*/
-    data.forEach(postData =>{
+    /*data.forEach(postData =>{*/
+
+    const indexEnd = Math.min(index + cardsRow, data.length);
+
+    for (let i = index; i < index + cardsRow && i < data.length; i++) {
+        const postData = data[i];
         const postElement = document.createElement('div');
         postElement.classList.add('card');
+
         postElement.innerHTML=`
         <img class="avatar" src="${postData.avatar}"></img>
         <p class="id"><b>#</b>${postData.id}</p>
-        <p class="section">${postData.section}</p>
         <div class="name">
             <h3 class="first_name">${postData.first_name}</h3>
             <h3 class="last_name">${postData.last_name}</h3>
@@ -77,12 +87,26 @@ const methods = ()=>{
         <p class="email"><a href="mailto:${postData.email}">${postData.email}</a></p>
         `;
         container.appendChild(postElement);
-    });
+      
+    }
+
+    index += cardsRow;
+
+    if (index >= data.length){
+      loadMore.style.display = 'none';
+      noData.style.display= 'block';
+    }
+    else{
+      loadMore.style.display = 'block';
+      noData.style.display= 'none';
+    }
 };
 
-document.addEventListener('DOMContentLoaded', methods);
+document.addEventListener('DOMContentLoaded', () => {
+  displayCards();
+  loadMore.addEventListener('click', displayCards);
+});
 
 </script>
 </body>
 </html>
-
