@@ -57,6 +57,7 @@ body{
 .avatar{
     margin: 0, auto;
     max-width: 100%;
+    aspect-ratio: 1;
     height: auto;
     border-radius: 60%;
     object-fit: cover;
