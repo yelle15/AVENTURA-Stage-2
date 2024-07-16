@@ -17,7 +17,8 @@ body{
     max-width: 1000px;
     margin: 4rem auto;
     animation: fade 1s ease-out forwards;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns:repeat(3, 1fr);
     gap: 30px;
 }
