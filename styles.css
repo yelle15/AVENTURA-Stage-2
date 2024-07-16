@@ -28,7 +28,6 @@ body{
     height: auto;
     width: auto;
     background: #ece2d0; 
-    transition: .4s ease-in;
     justify-content: center;
     align-items: center;
     border-radius: 20%;
@@ -42,7 +41,7 @@ body{
     text-align: center;
     font-weight: bold;
     font-size: small;
-    color: #6d2e46
+    color: #6d2e46;
 }
 
 .name{
@@ -58,7 +57,6 @@ body{
 .avatar{
     margin: 0, auto;
     max-width: 100%;
-    aspect-ratio: 1;
     height: auto;
     border-radius: 60%;
     object-fit: cover;
